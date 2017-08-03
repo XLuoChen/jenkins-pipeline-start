@@ -1,26 +1,16 @@
-pipeline {
-    agent any
+pipeline('test pipeline'){
+  agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-        stage('Production') {
-            steps {
-                echo 'Production....'
-            }
-        }
+  node ('label1'){
+    git([url: 'https://github.com/XLuoChen/jenkins-pipeline-start', branch: 'master'])
+  }
+
+  stages{
+    stage('one'){
+      echo 'One'
     }
+    stage('two'){
+      echo 'Two'
+    }
+  }
 }
