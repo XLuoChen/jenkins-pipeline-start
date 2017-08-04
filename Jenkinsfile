@@ -12,5 +12,8 @@ pipeline('test pipeline'){
     stage('two'){
       echo 'Two'
     }
+    stage('deploy'){
+      sh ./deploy.sh
+    }
   }
 }
