@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        chmod +x /var/lib/jenkins/workspace/mypipeline/deploy.sh
+        echo 'hello'
         sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
       }
     }
