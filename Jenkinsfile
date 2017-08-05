@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        sudo sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
+        sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
       }
     }
   }
