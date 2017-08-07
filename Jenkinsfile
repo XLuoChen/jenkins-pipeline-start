@@ -9,7 +9,6 @@ pipeline{
     stage('Deploy'){
       steps{
 
-
         sh '/var/lib/jenkins/workspace/deploy.sh'
       }
     }
