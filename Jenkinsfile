@@ -10,7 +10,7 @@ pipeline{
       steps{
 
 
-        sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
+        sh '/var/lib/jenkins/workspace/deploy.sh'
       }
     }
   }
