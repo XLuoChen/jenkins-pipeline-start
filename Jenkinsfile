@@ -8,8 +8,10 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        chmod +x /var/lib/jenkins/workspace/mypipeline/deploy.sh
-        sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
+        script{
+          chmod +x /var/lib/jenkins/workspace/mypipeline/deploy.sh
+          sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
+        }
       }
     }
   }
