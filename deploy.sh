@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo -s
+#sudo -s
 cd /var && mkdir www && cd www && mkdir html
-sudo cp -r /var/lib/jenkins/workspace/mypipeline /var/www/html
+cp -r /var/lib/jenkins/workspace/mypipeline /var/www/html
 service nginx restart
