@@ -8,7 +8,6 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        sh 'whoami'
         sh '/var/lib/jenkins/workspace/mypipeline/deploy.sh'
       }
     }
